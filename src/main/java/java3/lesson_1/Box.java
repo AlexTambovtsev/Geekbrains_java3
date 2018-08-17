@@ -24,11 +24,7 @@ public class Box<T extends Fruit> {
         numOfFruits++;
     }
     public float getWeight() {
-        float weight = 0;
-        for (int i = 0; i < numOfFruits; i++) {
-            weight += fruit.getWeight();
-        }
-        return weight;
+        return fruit.getWeight() * numOfFruits;
     }
 
     public boolean compare(Box box) {
